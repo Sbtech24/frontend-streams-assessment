@@ -1,0 +1,37 @@
+{
+  "bookmarks": [
+    {
+      "id": "1",
+      "title": "Sales performance breakdown",
+      "createdAt": "2026-01-05",
+      "group":"Today"
+        
+    },
+    {
+      "id": "2",
+      "title": "User churn analysis",
+      "createdAt": "2026-01-03",
+      "group":"sevenDays"
+    },
+    {
+      "id": "3",
+      "title": "Revenue forecast insights",
+      "createdAt": "2025-12-30",
+      "group":"sevenDays"
+
+    },
+    {
+      "id": "4",
+      "title": "November marketing report",
+      "createdAt": "2025-11-18",
+      "group":"November"
+    },
+    {
+      "id": "5",
+      "title": "November traffic trends",
+      "createdAt": "2025-11-05",
+      "group":"November"
+
+    }
+  ]
+}

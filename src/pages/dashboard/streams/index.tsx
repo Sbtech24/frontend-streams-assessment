@@ -1,4 +1,5 @@
 import { Bookmarks } from "@/components/bookmarks";
+import { Breakdown } from "@/components/breakdown";
 import { ChatBody } from "@/components/chat-body";
 import Layout from "@/components/layouts";
 
@@ -18,9 +19,9 @@ export default function Streams() {
 
       {/* history section */}
       <section>
-        <div>
+        <div className="flex flex-col md:flex-row">
           <Bookmarks/>
-          
+          <Breakdown/>
         </div>
 
       </section>

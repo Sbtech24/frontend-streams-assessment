@@ -2,14 +2,14 @@
   "bookmarks": [
     {
       "id": "1",
-      "title": "Sales performance breakdown",
+      "title": "Why is sentiment dropping this week?",
       "createdAt": "2026-01-05",
       "group":"Today"
         
     },
     {
       "id": "2",
-      "title": "User churn analysis",
+      "title": "What do people dislike about Premium?",
       "createdAt": "2026-01-03",
       "group":"sevenDays"
     },

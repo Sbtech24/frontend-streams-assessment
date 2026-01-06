@@ -4,10 +4,15 @@ export function ChatBody() {
   return (
     <section className="border">
       <div className="w-full max-w-4xl mx-auto p-10 flex flex-col gap-6">
-        <h1 className="text-3xl font-semibold bg-[linear-gradient(78deg,#625AFA_10%,#272464_86%)] bg-clip-text text-transparent">
-          Ask Stream{" "} <br />
-          <span className="text-[#CAC4D0] font-normal">about your data</span>
+        <div>
+
+        
+        <h1 className="text-3xl font-semibold bg-[linear-gradient(87deg,#625AFA_2%,#272464_14%)] bg-clip-text text-transparent md:text-4xl">
+          Ask Stream{" "} 
+         
         </h1>
+         <span className="text-[#CAC4D0] text-3xl md:text-4xl font-normal">about your data</span>
+         </div>
 
         {/* Input container */}
         <div className="w-full rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3 shadow-sm">

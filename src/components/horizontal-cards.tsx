@@ -1,12 +1,12 @@
 const HorizontalCardsData = [
   { id: 1, title: "Commodo consequat", bg: "bg-[#EEF0FF]" },
-  { id: 2, title: "Ullamco laboris", bg: "bg-[#EDEBFF]" },
-  { id: 3, title: "Exercitation nisi", bg: "bg-[#E8E6FF]" },
+//   { id: 2, title: "Ullamco laboris", bg: "bg-[#EDEBFF]" },
+//   { id: 3, title: "Exercitation nisi", bg: "bg-[#E8E6FF]" },
 ];
 
 export function HorizontalCards() {
   return (
-    <div className="relative h-52 w-full">
+    <div className="relative mx-auto h-52 w-full">
       {HorizontalCardsData.map((card, index) => (
         <div
           key={card.id}

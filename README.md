@@ -10,8 +10,9 @@
 
 ## Approach and Features implemented
 - [x] Implemented the bookmark functionality so users can add new chats to bookmarks all with static JSON
+- [x] Implemented the interactive dashboard section to uniquely map the data from the chat/insight using the static JSON as well 
 - [x] Implemented the Horizontal cards feature to all smooth swiping of result /brerakdown card in relation to the design
-- [x] Implemented the figma designs to to pixel perfect and responsive
+- [x] Implemented the pixel perfect figma designs,responsive across multiple screens/devices
 
 ## Live Demo
 

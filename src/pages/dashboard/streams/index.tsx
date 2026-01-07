@@ -1,6 +1,7 @@
-import { Bookmarks } from "@/components/bookmarks";
-import { Breakdown } from "@/components/breakdown";
-import { ChatBody } from "@/components/chat-body";
+
+import { Bookmarks } from "@/components/dashboard-streams/bookmarks";
+import { Breakdown } from "@/components/dashboard-streams/breakdown";
+import { ChatBody } from "@/components/dashboard-streams/chat-body";
 import Layout from "@/components/layouts";
 import { ChevronDown } from "lucide-react";
 

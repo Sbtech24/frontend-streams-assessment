@@ -31,7 +31,7 @@ export function HorizontalCards() {
   };
 
   return (
-    <div className="relative h-[260px] mx-auto w-full max-w-md">
+    <div className="relative h-65 mx-auto w-full max-w-md">
       {cards.map((card, index) => {
         const isTop = index === 0;
 

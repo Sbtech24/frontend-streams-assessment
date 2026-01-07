@@ -82,7 +82,7 @@ export function Breakdown({ activeBookmarkId}: BreakDownProp) {
     <section className="mx-auto max-w-3xl rounded-xl border bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2">
 
-        <div className="border-b md:border-b border-r p-6 flex flex-col">
+        <div className="border-b md:border-b border-r p-6 flex flex-col gap-2">
           <h2 className="text-xl font-medium text-[#141232]">Section 1</h2>
           <h3 className="mt-4 text-lg font-semibold text-[#141232]">{section1.title}</h3>
           <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">{section1.description}</p>

@@ -8,7 +8,8 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import { HorizontalCards } from "./horizontal-cards";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown,Sparkle } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 const dataSource = [
   {
@@ -29,6 +30,18 @@ const dataSource = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi commodo consequat.",
     date: "November 20th 2025",
   },
+  {
+    name: "Sawyer Merritt",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi commodo consequat.",
+    date: "November 20th 2025",
+  },
+  {
+    name: "Sawyer Merritt",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi commodo consequat.",
+    date: "November 20th 2025",
+  },
 ];
 
 const dataSources = [
@@ -39,7 +52,8 @@ const dataSources = [
   "Instagram",
 ];
 
-export function Breakdown() {
+export function Breakdown({ activeText }: { activeText: string | null }) {
+
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
 
@@ -51,10 +65,18 @@ export function Breakdown() {
     );
   };
 
+    if (!activeText) {
+    return (
+      <div className="h-50 w-full  flex justify-center items-center text-sm text-[#959AA6]">
+        Select a chat to display breakdown
+      </div>
+    );
+  }
+
   return (
     <section className="mx-auto max-w-3xl rounded-xl border bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="border-b md:border-b border-r p-6">
+        <div className="border-b md:border-b border-r p-6 flex flex-col gap-2">
           <h2 className="text-sm font-medium text-[#141232]">Section 1</h2>
 
           <h3 className="mt-4 text-lg font-semibold text-[#141232]">
@@ -67,9 +89,13 @@ export function Breakdown() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          <span className="mt-4 inline-flex items-center rounded-md bg-[#EFEFFF] px-2 py-0.5 text-xs font-medium text-[#625AFA]">
-            + Chip
-          </span>
+          <Badge
+                variant="secondary"
+                className="flex items-center gap-1 bg-[#EFEFFF] px-2 py-0.5 text-xs font-medium text-[#625AFA]"
+              >
+                <Sparkle className="h-3 w-3" fill="#625AFA" />
+                chip
+              </Badge>
         </div>
 
         <div className="border-b p-6">
@@ -130,9 +156,9 @@ export function Breakdown() {
             </DropdownMenu>
           </div>
 
-          <div className="space-y-5">
+          <div className=" max-h-64 overflow-y-auto pr-2 space-y-5">
             {dataSource.map((item, index) => (
-              <div key={index} className="space-y-2">
+              <div key={index} className="space-y-2 hover:bg-[#F7F8F9] p-2 rounded-sm cursor-pointer">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium text-[#141232]">
                     {item.name}

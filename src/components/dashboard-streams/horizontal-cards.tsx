@@ -3,41 +3,35 @@
 import { useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from "motion/react";
 
-type HorizontalCard = {
-  id: number;
-  title: string;
-  bg: string;
-};
-
-const HorizontalCardsData: HorizontalCard[] = [
+const cardsData = [
   {
     id: 1,
     title: "Insight 1",
     bg: "bg-[linear-gradient(87deg,#E0DEFE_55%,#EFEFFF_100%)]",
   },
-  { id: 2, title: "Insight 2", bg: "bg-[#E3E8EE]" },
+  { id: 2, title: "Insight 2", bg: "bg-[#4F566B]" },
   { id: 3, title: "Insight 3", bg: "bg-[#E7F8F9]" },
- 
+
 ];
 
 export function HorizontalCards() {
-  const [cards, setCards] = useState(HorizontalCardsData);
+  const [cards, setCards] = useState(cardsData);
 
   const x = useMotionValue(0);
-  const rotate = useTransform(x, [-150, 150], [-12, 12]);
-  const opacity = useTransform(x, [-150, 0, 150], [0, 1, 0]);
+  const rotate = useTransform(x, [-120, 120], [-6, 6]);
+  const opacity = useTransform(x, [-120, 0, 120], [0.6, 1, 0.6]);
 
-  const moveCardToBack = () => {
+  const cycleCard = () => {
     setCards((prev) => {
       const [first, ...rest] = prev;
       return [...rest, first];
     });
 
-    animate(x, 0, { duration: 0.2 });
+    animate(x, 0, { duration: 0.3, ease: "easeOut" });
   };
 
   return (
-    <div className="relative h-60 w-full">
+    <div className="relative h-[260px] mx-auto w-full max-w-md">
       {cards.map((card, index) => {
         const isTop = index === 0;
 
@@ -45,7 +39,7 @@ export function HorizontalCards() {
           <motion.div
             key={card.id}
             className={`
-              absolute left-1/2 top-1/2 w-80 rounded-xl p-6 shadow-md
+              absolute inset-0 rounded-2xl p-6 shadow-lg
               ${card.bg}
               ${isTop ? "cursor-grab active:cursor-grabbing" : ""}
             `}
@@ -54,27 +48,25 @@ export function HorizontalCards() {
               rotate: isTop ? rotate : 0,
               opacity: isTop ? opacity : 1,
               zIndex: cards.length - index,
-              scale: 1 - index * 0.05,
-              y: -index * 10,
-              translateX: "-50%",
-              translateY: "-50%",
+              scale: 1 - index * 0.04,
+              y: index * 10,
             }}
             drag={isTop ? "x" : false}
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={() => {
-              if (Math.abs(x.get()) > 80) {
-                moveCardToBack();
+              if (Math.abs(x.get()) > 70) {
+                cycleCard();
               } else {
-                animate(x, 0, { duration: 0.2 });
+                animate(x, 0, { duration: 0.25 });
               }
             }}
             transition={{
               type: "spring",
-              stiffness: 300,
-              damping: 25,
+              stiffness: 260,
+              damping: 22,
             }}
           >
-            <h3 className="text-sm font-medium text-[#141232]">
+            <h3 className="text-lg font-medium  text-[#141232]">
               Section 2
             </h3>
 
@@ -82,8 +74,9 @@ export function HorizontalCards() {
               {card.title}
             </h2>
 
-            <p className="mt-2 text-sm text-[#6B7280]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <p className="mt-3 text-xs leading-relaxed text-wrap text-[#000000]">
+              Lorem ipsum dolor sit amet, consectetur
+              
             </p>
           </motion.div>
         );

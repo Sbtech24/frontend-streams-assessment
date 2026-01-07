@@ -22,7 +22,7 @@ function BookmarkItem({
         {title.length > 26 ? title.slice(0, 26) + "..." : title}
       </p>
 
-      <div className="invisible flex gap-2 group-hover:visible group-focus:visible">
+      <div className="md:invisible md:group-hover:visible flex gap-2 ">
         <Bookmark
           size={14}
           onClick={(e) => {

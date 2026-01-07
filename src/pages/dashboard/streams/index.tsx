@@ -26,7 +26,7 @@ export default function Streams() {
 
    
       <section>
-        <div className="flex flex-col gap-6 lg:flex-row">
+        <div className="flex flex-col gap-6 lg:flex-row p-3 md:p-0">
            <Bookmarks onSelect={setActiveBookmarkId} />
           <div className="pt-5 w-full">
           <Breakdown  activeBookmarkId={activeBookMarkId}/>

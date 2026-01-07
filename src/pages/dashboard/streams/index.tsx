@@ -8,7 +8,8 @@ import { ChevronDown } from "lucide-react";
 
 
 export default function Streams() {
- const [activeText, setActiveText] = useState<string | null>(null);
+
+ const [activeBookMarkId, setActiveBookmarkId] = useState<string | null>("1");
   return (
     <Layout>
       <header className="py-6 px-8">
@@ -21,14 +22,14 @@ export default function Streams() {
           <p className="text-[#4F566B] cursor-pointer">Show History</p>
         </div>
       </header>
-      <ChatBody onAnalyze={setActiveText}/>
+      <ChatBody onAnalyze={setActiveBookmarkId}/>
 
    
       <section>
         <div className="flex flex-col gap-6 lg:flex-row">
-           <Bookmarks onSelect={setActiveText} />
+           <Bookmarks onSelect={setActiveBookmarkId} />
           <div className="pt-5 w-full">
-          <Breakdown activeText={activeText}/>
+          <Breakdown  activeBookmarkId={activeBookMarkId}/>
 
           </div>
         </div>

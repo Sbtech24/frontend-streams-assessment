@@ -4,34 +4,101 @@
       "id": "1",
       "title": "Why is sentiment dropping this week?",
       "createdAt": "2026-01-05",
-      "group":"Today"
-        
+      "group": "Today",
+      "breakdown": {
+        "section1": {
+          "title": "Sentiment Overview",
+          "description": "This week shows a drop in sentiment due to negative mentions on social media.",
+          "badge": "Alert"
+        },
+        "section2": {
+          "cards": ["Negative Mentions Card", "Top Complaints Card", "Sentiment Trend Card"]
+        },
+        "section3": {
+          "title": "Detailed Insights",
+          "description": "Users report frustration with performance and UI changes in the latest update."
+        }
+      }
     },
     {
       "id": "2",
       "title": "What do people dislike about Premium?",
       "createdAt": "2026-01-03",
-      "group":"sevenDays"
+      "group": "sevenDays",
+      "breakdown": {
+        "section1": {
+          "title": "Premium Feedback Summary",
+          "description": "Users dislike pricing and limited features in Premium.",
+          "badge": "Feedback"
+        },
+        "section2": {
+          "cards": ["Pricing Complaints Card", "Feature Requests Card"]
+        },
+        "section3": {
+          "title": "Key Points",
+          "description": "Most complaints revolve around price and missing functionalities."
+        }
+      }
     },
     {
       "id": "3",
       "title": "Revenue forecast insights",
       "createdAt": "2025-12-30",
-      "group":"sevenDays"
-
+      "group": "sevenDays",
+      "breakdown": {
+        "section1": {
+          "title": "Revenue Forecast",
+          "description": "Projected revenue for the next quarter based on current trends.",
+          "badge": "Info"
+        },
+        "section2": {
+          "cards": ["Revenue Card 1", "Revenue Card 2"]
+        },
+        "section3": {
+          "title": "Revenue Details",
+          "description": "Detailed revenue breakdown by product and region."
+        }
+      }
     },
     {
       "id": "4",
       "title": "November marketing report",
       "createdAt": "2025-11-18",
-      "group":"November"
+      "group": "November",
+      "breakdown": {
+        "section1": {
+          "title": "Marketing Overview",
+          "description": "Summary of November marketing campaigns and performance.",
+          "badge": "Report"
+        },
+        "section2": {
+          "cards": ["Campaign Card 1", "Campaign Card 2"]
+        },
+        "section3": {
+          "title": "Campaign Insights",
+          "description": "Insights on campaign performance and recommendations for next month."
+        }
+      }
     },
     {
       "id": "5",
       "title": "November traffic trends",
       "createdAt": "2025-11-05",
-      "group":"November"
-
+      "group": "November",
+      "breakdown": {
+        "section1": {
+          "title": "Traffic Overview",
+          "description": "Overview of November traffic trends across channels.",
+          "badge": "Trend"
+        },
+        "section2": {
+          "cards": ["Traffic Card 1", "Traffic Card 2"]
+        },
+        "section3": {
+          "title": "Detailed Analysis",
+          "description": "Traffic breakdown by source, campaign, and user segment."
+        }
+      }
     }
   ]
 }

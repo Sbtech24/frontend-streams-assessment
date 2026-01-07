@@ -1,5 +1,4 @@
 "use client";
-
 import data from "@/data/bookmarks.json";
 import { ChevronDown, Bookmark, Link2,Sparkle} from "lucide-react";
 import { useState } from "react";
@@ -68,7 +67,7 @@ export function Bookmarks({ onSelect }: { onSelect: (text: string) => void }) {
         <BookmarkItem
           key={item.id}
           title={item.title}
-          onSelect={() => onSelect(item.title)}
+          onSelect={() => onSelect(item.id)}
           onBookmark={() => handleAddBookmark(item)}
         />
       ));
@@ -87,7 +86,7 @@ export function Bookmarks({ onSelect }: { onSelect: (text: string) => void }) {
             <BookmarkItem
               key={item.id}
               title={item.title}
-              onSelect={() => onSelect(item.title)}
+              onSelect={() => onSelect(item.id)}
             />
           ))
         )}

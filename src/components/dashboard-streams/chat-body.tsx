@@ -4,10 +4,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Sparkle } from "lucide-react";
-
-type ChatBodyProps = {
-  onAnalyze: (text: string) => void;
-};
+import { ChatBodyProps } from "@/types";
 
 export function ChatBody({onAnalyze}:ChatBodyProps) {
   const [value, setValue] = useState("");
@@ -17,7 +14,7 @@ export function ChatBody({onAnalyze}:ChatBodyProps) {
     e.preventDefault();
 
     if (!hasText) return;
-    onAnalyze(value);
+    onAnalyze("1");
     setValue("");
   };
 

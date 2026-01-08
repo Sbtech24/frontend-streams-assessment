@@ -99,7 +99,7 @@ export function Breakdown({ activeBookmarkId}: BreakDownProp) {
 
   
         <div className="border-b p-6">
-          <h2 className="mb- text-xl  font-medium text-[#141232]">Section 2</h2>
+          <h2 className="mb-2 text-xl  font-medium text-[#141232]">Section 2</h2>
           <HorizontalCards/>
         </div>
 
